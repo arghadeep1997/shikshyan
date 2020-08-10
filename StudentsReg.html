@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML CSS Register Form</title>
+    <link rel="stylesheet" href="css/Regstyle.css">
+    <style>
+      body{
+        background-image: url(imgs/Student\ Update.jpg)	
+      }
+    </style>
+  </head>
+  <body>
+    <form action="index.html" class="signup-form" >
+
+      <!-- form header -->
+      <div class="form-header">
+        <h1>REGISTRATION FORM :</h1>
+      </div>
+
+      <!-- form body -->
+      <div class="form-body">
+
+        <!-- Firstname and Lastname -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="Students firstname" class="label-title">Students First name *</label>
+            <input type="text" id="firstname" class="form-input" placeholder="enter your first name" required="required">
+          </div>
+          <div class="form-group right">
+            <label for="Students lastname" class="label-title">Students Last name</label>
+            <input type="text" id="lastname" class="form-input" placeholder="enter your last name" >
+          </div>
+        </div>
+
+        <!-- Date of Birth & Gender -->
+        <div class="horizontal-group">
+          <div class="form-group right">
+
+            <label for="Date of Birth" class="label-title">Date of Birth</label>
+            <input type="date" id="Date of Birth" class="form-input" >
+          </div>
+
+          <div class="form-group left">
+          <label class="label-title">Gender: </label>
+          <div class="input-group ">
+            <input type="Radio" name="Gender" value="Male">Male
+            <input type="Radio" name="Gender" value="Female">Female    
+          </div>
+          </div>
+        </div>
+
+
+          <!-- Achievement  and More -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="Achievement" class="label-title">Achievement</label>
+            <input type="text" id="Achievement" class="form-input">
+          </div>
+          <div class="form-group right">
+            <label for="More" class="label-title">More</label>
+            <input type="text" id="More" class="form-input">
+          </div>
+        </div>
+
+          <!-- Medium Preference  and Standard -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label class="label-title">Medium:</label>
+            <div class="input-group">
+              <label for="Bengali"><input type="checkbox" name="Bengali" value="Bengali" id="Bengali">Bengali</label>
+              <label for="English"><input type="checkbox" name="English" value="English" id="English"> English</label>
+            </div>
+          </div>
+          <div class="form-group right">
+          <label class="label-title"> <p> <br> </p> </label>
+        </div>
+ 
+        <!-- Address -->
+        <div class="form-group">
+          <label for="Address" class="label-title">Address*</label>
+          <input type="Address" id="Address" class="form-input" placeholder="enter your Address" required="required">
+        </div>
+
+
+        <!-- School and college -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="School" class="label-title"> <p style="color:red"><b><u><i>School</u></i></b></p></label>
+            
+            <label class="label-title">Boards: </label>
+            <div class="input-group">
+              <label for="WB"><input type="checkbox" name="WB" value="WB" id="WB">West Bengal Board</label>
+              <!-- <label for="WBCHSE"><input type="radio" name="WBCHSE" value="WBCHSE" id="WBCHSE"> WBCHSE</label> -->
+              <label for="ICSE"><input type="checkbox" name="ICSE" value="ICSE" id="ICSE">ICSE</label>
+              <label for="CBSC"><input type="checkbox" name="CBSC" value="CBSC" id="CBSC"> CBSC</label>
+            </div>
+
+            <label for="subject" class="label-title"><br></label>
+            <label for="subject" class="label-title">Class</label>
+            <input type="number" id="Fees" class="form-input">
+          </div>
+
+          <div class="form-group right">
+
+            <label for="college" class="label-title"><p style="color:red"><b><u><i>College</u></i></b></p></label>
+
+            <label for="Select Degree" class="label-title">Degree Persuing</label>
+            <input type="text" id="Select Degree" class="form-input" placeholder="Which degree you prefer to teach">
+            
+            <label for="subject" class="label-title"><br></label>
+            <label for="subject" class="label-title">Year</label>
+            <input type="text" id="subject" class="form-input" placeholder="ex- First Year">
+          </div>
+        </div>
+
+
+      <!-- form-footer -->
+      <div class="form-footer">
+        <span>* required</span>
+        <button type="submit" class="btn">submit</button>
+       
+
+      </div>
+
+    </form>
+
+
+  </body>
+</html>

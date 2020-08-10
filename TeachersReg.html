@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML CSS Register Form</title>
+    <link rel="stylesheet" href="css/Regstyle.css">
+    <style>
+      body{
+        background-image: url(imgs/Teacher\ Update.jpg)	
+      }
+    </style>
+  </head>
+  <body>
+    <form action="index.html" class="signup-form" >
+
+      <!-- form header -->
+      <div class="form-header">
+        <h1>REGISTRATION FORM :</h1>
+      </div>
+
+      <!-- form body -->
+      <div class="form-body">
+
+        <!-- Firstname and Lastname -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="teachers firstname" class="label-title">Teacher First name *</label>
+            <input type="text" id="firstname" class="form-input" placeholder="enter your first name" required="required">
+          </div>
+          <div class="form-group right">
+            <label for="teachers lastname" class="label-title">Teachers Last name</label>
+            <input type="text" id="lastname" class="form-input" placeholder="enter your last name" >
+          </div>
+        </div>
+
+        <!-- Date of Birth & Gender -->
+        <div class="horizontal-group">
+          <div class="form-group right">
+
+            <label for="Date of Birth" class="label-title">Date of Birth</label>
+            <input type="date" id="Date of Birth" class="form-input" >
+          </div>
+
+          <div class="form-group left">
+          <label class="label-title">Gender: </label>
+          <div class="input-group ">
+            <input type="Radio" name="Gender" value="Male">Male
+            <input type="Radio" name="Gender" value="Female">Female    
+          </div>
+          </div>
+        </div>
+
+          <!-- Qualification and Experiance-->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="Qualification" class="label-title">Qualification</label>
+            <br>
+            <input type="text" id="Qualification" class="form-input" placeholder="enter your Qualification">
+          </div>
+          <div class="form-group right">
+            <label for="Experiance" class="label-title">Experiance*</label>
+            <input type="number" id="Experiance" class="form-input" placeholder="enter your Experiance" required="required">
+          </div>
+        </div>
+
+          <!-- Achievement  and More -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="Achievement" class="label-title">Achievement</label>
+            <input type="text" id="Achievement" class="form-input">
+          </div>
+          <div class="form-group right">
+            <label for="More" class="label-title">More</label>
+            <input type="text" id="More" class="form-input">
+          </div>
+        </div>
+
+          <!-- Medium Preference  and Standard -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label class="label-title">Medium:</label>
+            <div class="input-group">
+              <label for="Bengali"><input type="checkbox" name="Bengali" value="Bengali" id="Bengali">Bengali</label>
+              <label for="English"><input type="checkbox" name="English" value="English" id="English"> English</label>
+            </div>
+          </div>
+          <div class="form-group right">
+          <label class="label-title">Standard: </label>
+          <div class="input-group">
+            <label for="Kinder"><input type="checkbox" name="Kinder" value="Kinder" id="Kinder">Kinder</label>
+            <label for="Primary"><input type="checkbox" name="Primary" value="Primary" id="Primary"> Primary</label>
+            <label for="Secondary"><input type="checkbox" name="Secondary" value="Secondary" id="Secondary"> Secondary</label>
+            <label for="Higher Secondary"><input type="checkbox" name="Higher Secondary" value="Higher Secondary" id="Higher Secondary">Higher Secondary</label>
+            <label for="Graduation"><input type="checkbox" name="Graduation" value="Graduation" id="Graduation"> Graduation</label>
+            <br>
+            <label for="Post Graduation"><input type="checkbox" name="Post Graduation" value="Post Graduation" id="Post Graduation"> Post Graduation</label>
+
+          </div>
+          </div>
+        </div>
+ 
+        <!-- Address -->
+        <div class="form-group">
+          <label for="Address" class="label-title">Address*</label>
+          <input type="Address" id="Address" class="form-input" placeholder="enter your Address" required="required">
+        </div>
+
+        <!--Fees & Fees Details -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="Fees " class="label-title">Fees</label>
+            <input type="number" id="Fees" class="form-input">
+          </div>
+          <div class="form-group right">
+            <label for="Fees Details" class="label-title">Fees Details</label>
+            <input type="text" id="Fees Details" class="form-input">
+          </div>
+        </div>
+
+        <!-- School and college -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="School" class="label-title"> <p style="color:red"><b><u><i>School</u></i></b></p></label>
+            <label class="label-title">Boards: </label>
+            <div class="input-group">
+              <label for="WB"><input type="checkbox" name="WB" value="WB" id="WB">West Bengal Board</label>
+              <!-- <label for="WBCHSE"><input type="radio" name="WBCHSE" value="WBCHSE" id="WBCHSE"> WBCHSE</label> -->
+              <label for="ICSE"><input type="checkbox" name="ICSE" value="ICSE" id="ICSE">ICSE</label>
+              <label for="CBSC"><input type="checkbox" name="CBSC" value="CBSC" id="CBSC"> CBSC</label>
+
+            </div>
+            <label for="subject" class="label-title"><br></label>
+            <label for="subject" class="label-title">Subjects</label>
+            <input type="text" id="subject" class="form-input" placeholder="subject1,subject2,subject3..">
+
+          </div>
+          <div class="form-group right">
+            <label for="college" class="label-title"><p style="color:red"><b><u><i>College</u></i></b></p></label>
+            <label for="Select Degree" class="label-title">Select Degree</label>
+            <input type="text" id="Select Degree" class="form-input" placeholder="Which degree you prefer to teach">
+            <label for="subject" class="label-title"><br></label>
+            <label for="subject" class="label-title">Subjects</label>
+            <input type="text" id="subject" class="form-input" placeholder="subject1,subject2,subject3..">
+
+          </div>
+        </div>
+
+
+      <!-- form-footer -->
+      <div class="form-footer">
+        <span>* required</span>
+        <button type="submit" class="btn">submit</button>
+       
+
+      </div>
+
+    </form>
+
+
+  </body>
+</html>
