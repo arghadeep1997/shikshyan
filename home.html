@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shikshyan</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/book.svg">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;700&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a7d5a0829f.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        nav {
+            height: 10vh;
+            background: #5b78c7;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            width: 50%;
+            height: 100%;
+            justify-content: space-around;
+            align-items: center;
+            margin-left: auto;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .landing {
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .landing h1 {
+            margin: 100px;
+            font-size: 50px;
+            color: #ae5fce;
+        }
+
+        @media screen and (max-width: 768px) {
+            .line {
+                width: 30px;
+                height: 3px;
+                background: white;
+                margin: 5px;
+            }
+
+            nav {
+                position: relative;
+            }
+
+            .hamburger {
+                position: absolute;
+                cursor: pointer;
+                right: 5%;
+                top: 50%;
+                transform: translate(-5%, -50%);
+                z-index: 1;
+            }
+
+            .nav-links {
+                position: fixed;
+                background: #5b78c7;
+                height: 100vh;
+                width: 100%;
+                flex-direction: column;
+                clip-path: circle(100px at 90% -10%);
+                -webkit-clip-path: circle(100px at 90% -10%);
+                transition: all 1s ease-out;
+                pointer-events: none;
+            }
+
+            .nav-links.open {
+                clip-path: circle(1000px at 90% -10%);
+                -webkit-clip-path: circle(1000px at 90% -10%);
+                pointer-events: all;
+            }
+
+            .landing {
+                flex-direction: column;
+            }
+
+            .nav-links li {
+                opacity: 0;
+            }
+
+            .nav-links li a {
+                font-size: 25px;
+            }
+
+            .nav-links li:nth-child(1) {
+                transition: all 0.5s ease 0.2s;
+            }
+
+            .nav-links li:nth-child(2) {
+                transition: all 0.5s ease 0.4s;
+            }
+
+            .nav-links li:nth-child(3) {
+                transition: all 0.5s ease 0.6s;
+            }
+
+            .nav-links li:nth-child(1) {
+                transition: all 0.5s ease 0.8s;
+            }
+
+            .nav-links li:nth-child(2) {
+                transition: all 0.5s ease 0.10s;
+            }
+
+            .nav-links li:nth-child(3) {
+                transition: all 0.5s ease 0.12s;
+            }
+
+            .nav-links li.fade {
+                opacity: 1;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Teachers</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Log in</a></li>
+        </ul>
+    </nav>
+    <section class="landing">
+        <h1>Shikshyan</h1>
+    </section>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+        const links = document.querySelectorAll(".nav-links li");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("open");
+            links.forEach(link => {
+                link.classList.toggle("fade");
+            });
+        });
+    </script>
+</body>
+
+</html>
